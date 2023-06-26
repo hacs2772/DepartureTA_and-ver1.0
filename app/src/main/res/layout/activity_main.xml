@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:text="한경대학교"
+                android:textColor="#000000"
+                android:textSize="60dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="출발시간 알림이"
+                android:textColor="#000000"
+                android:textSize="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/timescreen_move"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:text="일정 등록 / 조회     "
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/routescreen_move"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/ic_baseline_map_24"
+                android:text="상세 이동 경로     "
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/thread_start"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/ic_baseline_my_location_23"
+                android:text="(임시)위치 로케이션     "
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/thread_stop"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@drawable/rounded_button"
+                android:text="정지"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_my_location"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@drawable/rounded_button"
+                android:text="위경도"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="createNotification"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableTop="@drawable/ic_baseline_my_location_23"
+                android:background="@drawable/rounded_button"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="removeNotification"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableTop="@drawable/ic_baseline_my_location_23"
+                android:background="@drawable/rounded_button"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
